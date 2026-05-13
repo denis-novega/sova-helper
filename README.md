@@ -84,11 +84,6 @@ http://127.0.0.1:7861/health
 - `POST /compose_final` — assemble a final Markdown note from source summaries.
 - `POST /chat` — ask questions over processed artifacts through local RAG.
 
-## Privacy notes
-
-- Do not commit `.env`, `workspace/`, generated artifacts, virtual environments or build output.
-- Runtime files are written locally and are ignored by Git.
-- Rotate any API key that was ever committed or shared accidentally.
 
 ## License
 
