@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* База */
+html, body, #root { height: 100%; }
+body { @apply bg-surface-subtle text-gray-900 font-sans antialiased; }
+
+/* Утилити-классы темы (юзаем по всему проекту) */
+.card        { @apply rounded-2xl border border-surface-border bg-surface shadow-soft; }
+.input       { @apply w-full rounded-xl border border-surface-border bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary-500; }
+.btn         { @apply rounded-xl px-3 py-2 text-sm transition; }
+.btn-primary { @apply btn bg-primary-600 text-white hover:bg-primary-700; }
+.btn-ghost   { @apply btn border border-surface-border bg-white hover:bg-gray-50; }
+.badge       { @apply inline-flex items-center rounded-lg bg-primary-50 px-2 py-1 text-xs font-medium text-primary-700; }
+.tab         { @apply rounded-xl px-3 py-1.5 text-sm; }
+.tab-active  { @apply tab bg-primary-600 text-white; }

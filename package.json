@@ -1,0 +1,36 @@
+{
+  "name": "sova",
+  "version": "1.0.0",
+  "description": "Local AI summarizer & study assistant (React + FastAPI + Tauri)",
+  "private": false,
+  "main": "index.js",
+  "author": "Sova contributors",
+  "license": "MIT",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "npm run tauri dev",
+    "build": "npm run tauri build",
+    "backend:start": "bash scripts/dev-backend.sh",
+    "backend:stop": "bash scripts/stop-backend.sh",
+    "frontend:dev": "npm --prefix ui run dev",
+    "frontend:build": "npm --prefix ui run build",
+    "dev:serve": "concurrently -k -n BACKEND,FRONTEND -c blue,green \"npm run backend:start\" \"npm run frontend:dev\"",
+    "dev:ui": "npm --prefix ui run dev"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.9.0",
+    "docx": "^9.5.1",
+    "framer-motion": "^12.23.24"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.9.1",
+    "concurrently": "^9.2.1"
+  },
+  "keywords": [
+    "tauri",
+    "fastapi",
+    "openai",
+    "summarizer",
+    "desktop-app"
+  ]
+}
